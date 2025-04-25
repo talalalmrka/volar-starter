@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "release": "npm version patch -m \"chore: release v%s\" && npm run build && git push && git push --tags && npm publish"
   },
   "dependencies": {
     "vue": "latest"
